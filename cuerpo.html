@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT BodyType</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav >
+            <ul class="nav-left-section">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="cuerpo.html">Descubre tu tipo de cuerpo</a>
+                </li>
+                <li>
+                    <a href="dieta.html">Calcula tu dieta</a>
+                </li>
+                <li>
+                    <a href="about.html">Acerca de</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="main-intro">
+            <h1>Descubre tu tipo de cuerpo</h1>
+            <p>Toma una captura de tu torso. De las caderas para arriba</p>
+        </section>
+        <section>
+            <span name="errorMsg"></span>
+        </section>
+        <section>
+            <div>
+                <video id="video_frame" playsinline autoplay></video>
+            </div>
+        </section>
+        <section>
+            <div class="main-button">
+                <button id="snap_frame">Capturar imagen</button>
+                <br/><br/>
+                <canvas id="canvas_frame" > </canvas>
+            </div>
+        </section>
+
+        <script src="main.js"></script>
+
+    </main>
+
+    <footer>
+        <p class="footer-left">Developed by Alejandro Martinez</p>
+        <p class="footer-right">Todos los derechos reservados</p>
+
+    </footer>
+    
+</body>
+</html>

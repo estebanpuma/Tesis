@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT Dieta</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-left-section">
+                <li>
+                    <a href="index.html">Home</a>
+                    
+                </li>
+                <li>
+                    <a href="cuerpo.html">Descubre tu tipo de cuerpo</a>
+                </li>
+                <li>
+                    <a href="dieta.html">Calcula tu dieta</a>
+                </li>
+                <li>
+                    <a href="about.html">Acerca de</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+        
+        <h1>Ingresa tus datos</h1>
+        
+        <section class="section-form">
+            
+            <form action="main.js" method="get">
+                <section class="section-tipocuerpo">
+                    <h2>Tipo de cuerpo</h2>
+                    <p>Si no sabes cual es tu tipo de cuerpo, descubrelo <a href="cuerpo.html">aqui</a>. </p>
+                    <p>Selecciona uno:</p>
+                    <p> 
+                        <input type="radio" name="tipo" value="ec" > Ectomorfo
+                        <input type="radio" name="tipo" value="me" > Mesomorfo
+                        <input type="radio" name="tipo" value="en" > Endomorfo
+                    </p>
+                </section>
+                
+                <section class="section-medidas">
+                    <h2>Algunas medidas</h2>
+                    <p>Altura(cm)
+                        <input id="input_altura" type="number" name="altura" step="any" min=100 max=220>
+                    </p>
+                    <p>Cuello(cm)
+                        <input id="input_cuello" type="number" name="cuello" step="any" min="0" max="80">
+                    </p>
+                    <p>Cintura(cm)
+                        <input id="input_cintura" type="number" name="cintura" step="any" min="0" max="200">
+                    </p>
+                    <p>Peso(Kg)
+                        <input id="input_peso" type="number" name="peso" step="any" min="0" max="200">
+                    </p>
+                </section>
+                
+                <section class="section-actividad">
+                    <h1>Actividad</h1>
+                    <p>Indica tu nivel de Actividad</p>
+                    <p>
+                        <input type="range" name="actividad" id="input_nivel_actividad"
+                        min="1.2" max="1.9" step="0.175">
+                    </p>
+                    <ul class="nivel-actividad-label">
+                        <li id="label-bajo">Bajo</li>
+                        <li id="label-medio">Medio</li></div>
+                        <li id="label-alto">Alto</li>
+                        
+                        
+                        
+                    </ul>
+                </section>
+                
+                <section class="section-meta">
+                    <h1>Elige tu meta</h1>
+                    <p>Tu meta es subir o bajar de peso?:</p>
+                    <p> 
+                        <input type="radio" name="meta" value="subir" > Aumentar masa muscular
+                        <input type="radio" name="meta" value="bajar" > Bajar porcentaje de grasa  
+                    </p>
+                </section>
+                
+                <section class="main-button">
+                    <div>
+                        <button  type="button" onclick="onClickCalcularDieta()">
+                            Calcular
+                        </button>
+                    </div>
+                </section>
+                
+
+            </form>
+        
+        </section>
+        
+        <section class="section-resultados">
+            <h1 id ="title_reultados"></h1>
+            <div class="div-resultados">
+                <ul class="resultados-left">
+                    <li>
+                        <p id="out_porcentajeGrasa"></p>
+                    </li>
+                    <li>
+                        <p id="out_masamagra"></p>
+                    </li>
+                    <li>
+                        <p id="out_bmr"></p>
+                    </li>
+                    <li>
+                        <p id="out_caloriasMantemimiento"></p>
+                    </li>
+                    <li>
+                        <p id="out_caloriasMeta"></p>
+                    </li>
+                    <li>
+                        <p id="out_proteinas"></p>  
+                    </li>
+                    <li>
+                        <p id="out_carbohidratos"></p>
+                    </li>
+                    <li>
+                        <p id = "out_grasas"></p>
+                    </li>
+                </ul>
+                
+
+            </div>
+            
+
+
+        </section>
+    </main>
+
+    <footer>
+        <p class="footer-left">Developed by Alejandro Martinez</p>
+        <p class="footer-right">Todos los derechos reservados</p>
+    </footer>
+    
+    <script src="dieta.js"></script>
+</body>
+</html>

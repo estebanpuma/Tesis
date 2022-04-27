@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+header nav .nav-left-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: left;
+    align-items: center;
+}
+
+nav .nav-left-section a{
+    margin-right: 20px;
+    color: white;
+}
+
+nav .nav-left-section a:hover{
+    text-decoration-line: underline;
+}
+
+main {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+main .main-logo {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-logo img{
+    width: 100%;
+    border-radius: 10%;
+    
+}
+
+main .main-logo .tag{
+    margin: 0;
+    text-align: right;
+}
+
+main .main-button{
+    width: 30%;
+    margin: 0 auto;
+}
+
+main .main-button button{
+    height: 40px;
+    width: 90%;
+    background-color: black;
+    border: 1px;
+    font-size:  14px;
+    color: white;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 0px;
+    
+}
+main .main-button button a{
+    color: azure;
+}
+
+
+main .main-button button:hover{
+    background-color: #222222;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+main .main-description p::after{
+    content: "💪";
+}
+
+main .main-description #pia::after{
+    content: "🤖";
+}
+footer{
+    width: 100%;
+    height: 50px;  
+    background-color: black; 
+    bottom: 0;
+    position: fixed;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+    
+}
+
+footer .footer-left {
+    text-align: left;
+    margin-left: 5%;
+    
+}
+footer .footer-right {
+    text-align: right;
+    margin-right: 5%;
+   
+}
+
+/*Tipo de cuerpo*/
+
+#video_frame{
+    height: 460px;
+}
+
+#canvas_frame{
+    width: 320px;
+    height: 320px;
+}
+
+/*Dieta*/
+
+main .section-form{
+    
+    padding-inline: 30%;
+}
+
+main .section-medidas{
+    background-color: black ;
+    border-radius: 5px;
+    color: aliceblue;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+
+main .nivel-actividad-label{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style: none;
+    padding-left: 30%;
+    padding-right: 30%;
+    
+}
+
+
+main .nivel-actividad-label #label-alto::after{
+    content: 💪;
+}
+
+#label-bajo::after{
+    content: 😴;
+    
+}
+
+#label-alto{
+    text-align: left;
+}
+
+main .nivel-actividad-label #label-medio{
+    
+    margin-right: 25px;
+}
+main .nivel-actividad-label #label-bajo{
+    text-align: right;
+    margin-right: 25px;
+}
