@@ -151,6 +151,10 @@ main .section-medidas{
     
 }
 
+main .resultados{
+    list-style: none;
+}
+
 
 main .nivel-actividad-label{
     height: auto;
