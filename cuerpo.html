@@ -34,26 +34,33 @@
             <h1>Descubre tu tipo de cuerpo</h1>
             <p>Toma una captura de tu torso. De las caderas para arriba</p>
         </section>
-        <section>
-            <span name="errorMsg"></span>
-        </section>
+        
         <section>
             <div>
-                <video id="video_frame" playsinline autoplay></video>
+                <video id="video_frame" playsinline autoplay ></video>
+
+                <div id="resultado"></div>
+            </div>
+            <div>
+                <canvas id="canvas_resized" width="200" height="230" ></canvas>
+                
             </div>
         </section>
         <section>
             <div class="main-button">
-                <button id="snap_frame">
-                    <a href="dieta.html">Capturar imagen</a> 
-                </button>
-                <br/><br/>
-                <canvas id="canvas_frame" > </canvas>
+                <a href="dieta.html">
+                    <button id="snap_frame">
+                        Continuar 
+                    </button>
+                </a>
+                
+                
             </div>
         </section>
 
-        <script src="main.js"></script>
-
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+        <script src="tipocuerpo.js"></script>
     </main>
 
     <footer>

@@ -129,7 +129,7 @@ function onClickCalcularDieta(){
     
     //Mostrar valores en HTML
     var out_porcentajeGrasa = document.getElementById("out_porcentajeGrasa");
-    out_porcentajeGrasa.innerText = "Tu porcentaje de grasa es: " + porcentajeGrasa.toFixed(0);
+    out_porcentajeGrasa.innerText = "Tu porcentaje de grasa es: " + porcentajeGrasa.toFixed(0) + "%";
 
     var out_masamagra = document.getElementById("out_masamagra");
     out_masamagra.innerText = "Tu masa magra es de: " + masamagra.toFixed(1) + " Kg";
