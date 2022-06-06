@@ -4,11 +4,12 @@ const X_MODEL = 200;
 const Y_MODEL = 230;
 
 let modelo;
+let facingMode = "user"
 
 //definimos las constantes para obtener y procesar el video
 
 const VIDEO_WIDTH = 320;
-const VIDEO_HEIGHT = 500;
+const VIDEO_HEIGHT = 600;
 const videoFrame = document.getElementById('video_frame');
 const canvasResized = document.getElementById('canvas_resized');
 var ctx = canvasResized.getContext('2d');
@@ -17,12 +18,10 @@ var ctx = canvasResized.getContext('2d');
 const constraints = {
     audio: false,
     video: {
+        facingMode: "environment",
         width: VIDEO_WIDTH,
         height: VIDEO_HEIGHT
     },
-    facingMode: {
-        exact: 'environment'
-      }
 }
 
 //comprobamos acceso a webcam
@@ -43,6 +42,18 @@ async function cargarCamara(stream){
     videoFrame.srcObject = stream;
     procesarVideo();
     predecir();
+}
+
+function cambiarCamara(stream){
+    if(stream){
+        stream.getTracks().forEach(track => {
+            track.stop();
+        });
+    }
+
+    facingMode = facingMode == "user" ? "environment": "user";
+    initWebCam();
+
 }
 
 const cargarModelo = async () => modelo = await tf.loadLayersModel('./modelo.json');  

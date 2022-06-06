@@ -113,6 +113,18 @@ main .main-button button{
     margin: 0 auto 40px auto;
     
 }
+
+main .secondary-button{
+    height: 24px;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    border: 1px;
+    font-size:  16px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 8px 80px 16px;
+}
+
 main .main-button button a{
     color: azure;
 }
