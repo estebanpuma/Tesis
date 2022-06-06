@@ -4,21 +4,21 @@ const X_MODEL = 200;
 const Y_MODEL = 230;
 
 let modelo;
-let facingMode = "environment"
+let facingMode = "user/environment"
 
 //definimos las constantes para obtener y procesar el video
 
-const VIDEO_WIDTH = 320;
-const VIDEO_HEIGHT = 600;
+const VIDEO_WIDTH = 360;
+const VIDEO_HEIGHT = 480;
 const videoFrame = document.getElementById('video_frame');
 const canvasResized = document.getElementById('canvas_resized');
 var ctx = canvasResized.getContext('2d');
 
 //definimos el tamano del video
-const constraints = {
+var constraints = {
     audio: false,
     video: {
-        facingMode: "environment",
+        facingMode: facingMode,
         width: VIDEO_WIDTH,
         height: VIDEO_HEIGHT
     },
@@ -51,8 +51,24 @@ function cambiarCamara(stream){
         });
     }
 
-    facingMode = facingMode == "environment" ? "user": "environment";
-    initWebCam();
+    facingMode = facingMode == "user" ? "environment": "user";
+
+    var constraints = {
+    audio: false,
+    video: {
+        facingMode: facingMode,
+        width: VIDEO_WIDTH,
+        height: VIDEO_HEIGHT
+        },
+    };
+    navigator.mediaDevices.getUserMedia(constraints)
+              .then(function(stream) {
+                  
+                  video.srcObject = stream;
+              })
+              .catch(function(err) {
+                  console.log("Oops, hubo un error", err);
+              })
 
 }
 
