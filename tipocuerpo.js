@@ -42,7 +42,7 @@ async function cargarCamara(stream){
     predecir();
 }
 
-const cargarModelo = async () => modelo = await tf.loadLayersModel('modelo.json');  
+const cargarModelo = async () => modelo = await tf.loadLayersModel('./modelo.json');  
 
 function procesarVideo(){
     
