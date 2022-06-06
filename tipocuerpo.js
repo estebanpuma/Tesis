@@ -53,7 +53,7 @@ function cambiarCamara(stream){
     if(facingMode == "user"){
         facingMode =  "environment";
     }else{
-        facingMode = 'environment'
+        facingMode = 'user'
     }
     
 
