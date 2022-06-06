@@ -12,13 +12,18 @@ a {
 
 header{
     width: 100%;
-    height: 60px;
+    height: 56px;
+    box-sizing: border-box;
 }
 
 header nav{
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     background-color: black;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.314);
+    box-sizing: border-box;
+    font-size: large;
 }
 
 header nav .nav-left-section{
@@ -28,66 +33,84 @@ header nav .nav-left-section{
     list-style: none;
     justify-content: left;
     align-items: center;
+    padding-left: 56px;
 }
 
 nav .nav-left-section a{
-    margin-right: 20px;
+    margin-right: 40px;
     color: white;
 }
+
 
 nav .nav-left-section a:hover{
     text-decoration-line: underline;
 }
 
 main {
-    margin-top: 80px;
-    text-align: center;
-    margin-bottom: 20px;
+    background-color: black;
+    height: 90vh;  
 }
 
-main .main-logo {
+main .main-container{
     width: 100%;
     height: 100%;
-    margin-bottom: 35px;
-}
-
-main .logo-container{
     display: grid;
-    place-items: center;
+    grid-template-columns: 600px auto;
+    align-items: center;
 }
 
-main .main-logo img{
-    width: 100%;
+main .description-container{
+    padding: 0 64px 24px 64px;
+    color: aliceblue;
+    background-color: black;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+main .main-img{
     height: 100%;
-    border-radius: 5%;
+    width: 100%;
+}
+
+main .main-img img{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
     
 }
 
-main .main-logo .tag{
-    margin: 0;
-    text-align: right;
+main .main-content{
+    margin-bottom: 80px;
 }
+
+
+main .main-content h1{
+    margin-bottom: 50px;
+    font-size: 60px;
+
+}
+
+main .main-content p{
+    font-size: large;
+    color: #d1d1d1;
+}
+
 
 main .main-button{
-    width: 30%;
-    margin: 0 auto;
-}
-
-main .div-img{
-    width: 300px;
-    height: 200px;
+    width: 64%;
+    margin: 0 auto 0 auto;
+    justify-content: center;
 }
 
 main .main-button button{
-    height: 40px;
+    height: 80px;
     width: 90%;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     border: 1px;
-    font-size:  14px;
-    color: white;
+    font-size:  32px;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
-    padding: 0 15px;
-    margin-right: 0px;
+    margin: 0 auto 40px auto;
     
 }
 main .main-button button a{
@@ -96,17 +119,37 @@ main .main-button button a{
 
 
 main .main-button button:hover{
-    background-color: #222222;
+    background-color: #d1d1d1;
     font-weight: bold;
     cursor: pointer;
 }
 
-main .main-description p::after{
-    content: "💪";
+main #pia::after{
+    content:  "🤖";
 }
 
-main .main-description #pia::after{
-    content: "🤖";
+@media (max-width: 600px){
+    main .main-container{
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        box-sizing: border-box;
+        grid-template-columns: 100% auto;
+    }
+    main .description-container{
+        width: auto;
+        box-sizing: border-box;
+    }
+    main .main-button{
+        width: 72%;
+        margin: 0 0 24px 24px;
+    }
+    main .main-button button{
+        height: 80px;
+        width: 100%;       
+        margin-bottom: 24px;
+        
+    }
 }
 
 main .video-resized{
@@ -116,10 +159,10 @@ main .video-resized{
 footer{
     width: 100%;
     height: 50px;  
-    background-color: black; 
+    background-color: rgb(255, 255, 255); 
     bottom: 0;
     position: fixed;
-    color: white;
+    color: rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 1fr 1fr;
     
@@ -140,6 +183,44 @@ footer .footer-right {
 
 /*Tipo de cuerpo*/
 
+main .main-container-cuerpo{
+    margin: 0 auto;
+    width: 320px;
+    height: 100%;
+    color: aliceblue;
+    justify-content: center;
+
+}
+
+main .main-container-cuerpo h1{
+    margin: 0;
+    padding-top: 24px;
+    
+}
+
+main .main-button.button-cuerpo{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .main-button.button-dieta{
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+main .main-button.button-dieta button{
+    height: 80px;
+    width: 90%;
+    background-color: rgb(250, 250, 250);
+    border: 1px;
+    font-size:  32px;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 40px auto 40px auto;
+    
+}
+
+
+
 #video_frame{
     height: 460px;
 }
@@ -149,22 +230,49 @@ footer .footer-right {
     height: 320px;
 }
 
-/*Dieta*/
-
-main .section-form{
-    
-    padding-inline: 30%;
+main .resultado-container{
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
 }
 
-main .section-medidas{
-    background-color: black ;
-    border-radius: 5px;
+main .resultado-ia{
+    font-size: large;
+    font-weight: bold;
     color: aliceblue;
-    padding-top: 5px;
-    padding-bottom: 10px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+}
+/*Dieta*/
+
+.main-dieta{
+    background-image: url(/img1.jpg);
+    height: 100vh;  
     
+}
+
+main .main-container-dieta{
+    margin: 0 auto;
+    padding: 10px 20px 0px 20px;
+    width: 350px;
+    height: 100%;
+    color: aliceblue;
+    justify-content: center;
+    background: rgba(1,1,1,0.7);
+
+}
+
+
+#link{
+    color: rgb(31, 184, 236);
+    text-decoration-style: dotted;
+    font-weight: bold;
+}
+
+main .section-form{
+    height: fit-content;
+}
+
+main .section-actividad p:nth-child(3){
+    margin: 0 30%;
 }
 
 main .resultados{
@@ -183,15 +291,6 @@ main .nivel-actividad-label{
 }
 
 
-main .nivel-actividad-label #label-alto::after{
-    content: 💪;
-}
-
-#label-bajo::after{
-    content: 😴;
-    
-}
-
 #label-alto{
     text-align: left;
 }
@@ -203,4 +302,27 @@ main .nivel-actividad-label #label-medio{
 main .nivel-actividad-label #label-bajo{
     text-align: right;
     margin-right: 25px;
+}
+
+/*Resultados*/
+
+#section-resultados{
+    color: aliceblue;
+    background-color: black;
+    height: 120vh;
+    display: none;
+}
+
+.div-resultados{
+    width: 360px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.div-resultados p{
+    color: #d1d1d1;
+}
+
+#title_resultados{
+    margin-top: 0px;
 }

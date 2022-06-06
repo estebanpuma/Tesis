@@ -21,124 +21,151 @@
                 <li>
                     <a href="dieta.html">Calcula tu dieta</a>
                 </li>
-                <li>
-                    <a href="about.html">Acerca de</a>
-                </li>
 
             </ul>
         </nav>
     </header>
-    <main>
+    <main class="main-dieta">
+        <div class="main-container-dieta">
+            <h1>Ingresa tus datos</h1>
         
-        
-        <h1>Ingresa tus datos</h1>
-        
-        <section class="section-form">
+            <section class="section-form">
+                
+                <form action="main.js" method="get">
+                    <section class="section-tipocuerpo">
+                        <h2>Tipo de cuerpo</h2>
+                        <p>Si no sabes cual es tu tipo de cuerpo, descubrelo <a href="cuerpo.html" id="link">aqui</a>. </p>
+                        <p>Selecciona uno:</p>
+                        <p> 
+                            <input type="radio" name="tipo" value="ec" > Ectomorfo
+                            <input type="radio" name="tipo" value="me" > Mesomorfo
+                            <input type="radio" name="tipo" value="en" > Endomorfo
+                        </p>
+                    </section>
+                    
+                    <section class="section-medidas">
+                        <h2>Algunas medidas</h2>
+                        <p>Altura(cm)
+                            <input id="input_altura" type="number" name="altura" step="any" min=100 max=220>
+                        </p>
+                        <p>Cuello(cm)
+                            <input id="input_cuello" type="number" name="cuello" step="any" min="0" max="80">
+                        </p>
+                        <p>Cintura(cm)
+                            <input id="input_cintura" type="number" name="cintura" step="any" min="0" max="200">
+                        </p>
+                        <p>Peso(Kg)
+                            <input id="input_peso" type="number" name="peso" step="any" min="0" max="200">
+                        </p>
+                    </section>
+                    
+                    <section class="section-actividad">
+                        <h1>Actividad</h1>
+                        <p>Indica tu nivel de Actividad</p>
+                        <p>
+                            <input type="range" name="actividad" id="input_nivel_actividad"
+                            min="1.2" max="1.9" step="0.175">
+                        </p>
+                        <ul class="nivel-actividad-label">
+                            <li id="label-bajo">Bajo</li>
+                            <li id="label-medio">Medio</li>
+                            <li id="label-alto">Alto</li>
+                            
+                            
+                            
+                        </ul>
+                    </section>
+                    
+                    <section class="section-meta">
+                        <h1>Elige tu meta</h1>
+                        <p>Tu meta es subir o bajar de peso?:</p>
+                        <p> 
+                            <input type="radio" name="meta" value="subir" > Aumentar masa muscular
+                        </p>
+                        <p>
+                            <input type="radio" name="meta" value="bajar" > Bajar porcentaje de grasa  
+                        </p>
+                    </section>
+                    
+                    <section class="main-button button-dieta">
+                        <div>
+                            <a href="#section-resultados">
+                                <button  type="button" onclick="onClickCalcularDieta()">
+                                    Calcular
+                                </button>
+                            </a>
+                        </div>
+                    </section>
+    
+                </form>
             
-            <form action="main.js" method="get">
-                <section class="section-tipocuerpo">
-                    <h2>Tipo de cuerpo</h2>
-                    <p>Si no sabes cual es tu tipo de cuerpo, descubrelo <a href="cuerpo.html">aqui</a>. </p>
-                    <p>Selecciona uno:</p>
-                    <p> 
-                        <input type="radio" name="tipo" value="ec" > Ectomorfo
-                        <input type="radio" name="tipo" value="me" > Mesomorfo
-                        <input type="radio" name="tipo" value="en" > Endomorfo
-                    </p>
-                </section>
-                
-                <section class="section-medidas">
-                    <h2>Algunas medidas</h2>
-                    <p>Altura(cm)
-                        <input id="input_altura" type="number" name="altura" step="any" min=100 max=220>
-                    </p>
-                    <p>Cuello(cm)
-                        <input id="input_cuello" type="number" name="cuello" step="any" min="0" max="80">
-                    </p>
-                    <p>Cintura(cm)
-                        <input id="input_cintura" type="number" name="cintura" step="any" min="0" max="200">
-                    </p>
-                    <p>Peso(Kg)
-                        <input id="input_peso" type="number" name="peso" step="any" min="0" max="200">
-                    </p>
-                </section>
-                
-                <section class="section-actividad">
-                    <h1>Actividad</h1>
-                    <p>Indica tu nivel de Actividad</p>
-                    <p>
-                        <input type="range" name="actividad" id="input_nivel_actividad"
-                        min="1.2" max="1.9" step="0.175">
-                    </p>
-                    <ul class="nivel-actividad-label">
-                        <li id="label-bajo">Bajo</li>
-                        <li id="label-medio">Medio</li></div>
-                        <li id="label-alto">Alto</li>
-                        
-                        
-                        
-                    </ul>
-                </section>
-                
-                <section class="section-meta">
-                    <h1>Elige tu meta</h1>
-                    <p>Tu meta es subir o bajar de peso?:</p>
-                    <p> 
-                        <input type="radio" name="meta" value="subir" > Aumentar masa muscular
-                        <input type="radio" name="meta" value="bajar" > Bajar porcentaje de grasa  
-                    </p>
-                </section>
-                
-                <section class="main-button">
-                    <div>
-                        <button  type="button" onclick="onClickCalcularDieta()">
-                            Calcular
-                        </button>
-                    </div>
-                </section>
-                
+            </section>
 
-            </form>
-        
-        </section>
-        
-        <section class="section-resultados">
-            <h1 id ="title_reultados"></h1>
-            <div class="div-resultados">
-                <ul class="resultados">
-                    <li>
-                        <p id="out_porcentajeGrasa"></p>
-                    </li>
-                    <li>
-                        <p id="out_masamagra"></p>
-                    </li>
-                    <li>
-                        <p id="out_bmr"></p>
-                    </li>
-                    <li>
-                        <p id="out_caloriasMantemimiento"></p>
-                    </li>
-                    <li>
-                        <p id="out_caloriasMeta"></p>
-                    </li>
-                    <li>
-                        <p id="out_proteinas"></p>  
-                    </li>
-                    <li>
-                        <p id="out_carbohidratos"></p>
-                    </li>
-                    <li>
-                        <p id = "out_grasas"></p>
-                    </li>
-                </ul>
-                
-
-            </div>
             
-
-
-        </section>
+        
+       
     </main>
+
+    <section id="section-resultados" >
+        <div class="div-resultados">
+            <h1 id ="title_resultados">
+                Resultados
+            </h1>
+        
+            <ul class="resultados">
+                <li>
+                    <h2>Porcentaje de grasa corporal</h2>
+                    <p id="out_porcentajeGrasa"></p>
+                    <p>Este dato representa el porcentaje de grasa que tienes respecto de tu peso total</p>
+                </li>
+                <li>
+                    <h2>Masa magra</h2>
+                    <p id="out_masamagra"></p>
+                    <p>La masa magra represnta la cantidad de m&uacute;sculo que tienes quitando la grasa</p>
+                </li>
+                <li>
+                    <h2>Tasa metab&oacute;lica basal</h2>
+                    <p id="out_bmr"></p>
+                    <p>El BMR representa el total de calorias necesarias para mantener tu masa magra si no hicieras ning&uacute;n esfuerzo</p>
+                </li>
+                <li>
+                    <h2>Calor&iacute;as de mantenimiento</h2>
+                    <p id="out_caloriasMantemimiento"></p>
+                    <p>Son las calor&iacute;asas necesarias para mantener tu peso actual de acuerdo a tu factor de actividad</p>
+                </li>
+                <li>
+                    <h2>Calor&iacute;as meta</h2>
+                    <p id="out_caloriasMeta"></p>
+                    <p>Representan las calorias que debes consumir diariamente para lograr tu objetivo</p>
+                </li>
+                <h2>Distribuci&oacute;n de macronutrientes</h2>
+                <li>
+                    
+                    <h2>Proteinas</h2>
+                    <p id="out_proteinas"></p>  
+                </li>
+                <li>
+                    <h2>Carbohidratos</h2>
+                    <p id="out_carbohidratos"></p>
+                </li>
+                <li>
+                    <h2>Grasas</h2>
+                    <p id = "out_grasas"></p>
+                </li>
+            </ul>
+            
+
+        </div>
+        <section class="main-button button-dieta">
+            <div>
+                
+                    <button  type="button">
+                        Continuar
+                    </button>
+            </div>
+        </section>
+
+    </section>
 
     <footer>
         <p class="footer-left">Developed by Alejandro Martinez</p>

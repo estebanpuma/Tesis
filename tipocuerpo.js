@@ -91,7 +91,7 @@ function predecir(){
         var mayorIndice = resultados.indexOf(Math.max.apply(null, resultados))
         var clases = ['ectomorfo','endomorfo', 'mesomorfo'];
         console.log('Prediccion: ', clases[mayorIndice]);
-        document.getElementById('resultado').innerHTML = clases[mayorIndice];
+        document.getElementById('resultado-ia').innerHTML = clases[mayorIndice];
 
     }
     setTimeout(predecir, 150);

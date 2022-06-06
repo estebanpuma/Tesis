@@ -1,3 +1,0 @@
-function Alimento(){
-    nombre
-}

@@ -1,4 +1,5 @@
 
+
 function calcularPorcentajeGrasa(altura, cuello, cintura){
     var grasa = 86.01*Math.log10((cintura/2.54)-((cuello/2.54)))-70.041*Math.log10(altura/2.54)+36.76;
     return grasa
@@ -126,28 +127,39 @@ function onClickCalcularDieta(){
     var caloriasMantenimiento = calcularCaloriasMantenimiento(bmr,factorActividad);
     var caloriasMeta = calcularCaloriasMeta(meta, caloriasMantenimiento, tipodecuerpo);
     var macronutrientes = calcularMacronutrientes(meta, caloriasMeta, tipodecuerpo, masamagra); //calculo proteinas, carbohidratos y grasas
+    var x = document.getElementById("section-resultados");
+    x.style.display = "block";
+    console.log(macronutrientes)
+    pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, caloriasMeta, macronutrientes );
     
-    //Mostrar valores en HTML
-    var out_porcentajeGrasa = document.getElementById("out_porcentajeGrasa");
-    out_porcentajeGrasa.innerText = "Tu porcentaje de grasa es: " + porcentajeGrasa.toFixed(0) + "%";
-
-    var out_masamagra = document.getElementById("out_masamagra");
-    out_masamagra.innerText = "Tu masa magra es de: " + masamagra.toFixed(1) + " Kg";
-
-    var out_caloriasMantemimiento = document.getElementById("out_caloriasMantemimiento");
-    out_caloriasMantemimiento.innerText = "Tus calorias de mantenimiento son: " + caloriasMantenimiento.toFixed(0) + " cal";
-
-    var out_caloriasMeta = document.getElementById('out_caloriasMeta');
-    out_caloriasMeta.innerText = "Tus calorias meta son: " + caloriasMeta.toFixed(0) + ' cal';
-
-    var out_proteinas = document.getElementById('out_proteinas');
-    out_proteinas.innerText = "Proteinas: " + macronutrientes[0].toFixed(0) + " gr";
-
-    var out_carbohidratos = document.getElementById('out_carbohidratos');
-    out_carbohidratos.innerText = "Carbohidratos: " + macronutrientes[1].toFixed(0) + " gr";
-
-    var out_grasas = document.getElementById('out_grasas');
-    out_grasas.innerText = "Grasas: " + macronutrientes[2].toFixed(0) + " gr";
-
-
 };
+
+function pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, caloriasMeta, macronutrientes ){
+
+     //Mostrar valores en HTML
+     var out_porcentajeGrasa = document.getElementById("out_porcentajeGrasa");
+     out_porcentajeGrasa.innerText = "Tu porcentaje de grasa es: " + porcentajeGrasa.toFixed(0) + "%";
+ 
+     var out_masamagra = document.getElementById("out_masamagra");
+     out_masamagra.innerText = "Tu masa magra es de: " + masamagra.toFixed(1) + " Kg";
+
+     var out_bmr = document.getElementById('out-bmr');
+     out_bmr.innerText = "BMR: " + bmr.toFixed(1);
+ 
+     var out_caloriasMantemimiento = document.getElementById("out_caloriasMantemimiento");
+     out_caloriasMantemimiento.innerText = "Tus calorias de mantenimiento son: " + caloriasMantenimiento.toFixed(0) + " cal";
+ 
+     var out_caloriasMeta = document.getElementById('out_caloriasMeta');
+     out_caloriasMeta.innerText = "Tus calorias meta son: " + caloriasMeta.toFixed(0) + ' cal';
+ 
+     var out_proteinas = document.getElementById('out_proteinas');
+     out_proteinas.innerText = "Proteinas: " + macronutrientes[0].toFixed(0) + " gr";
+ 
+     var out_carbohidratos = document.getElementById('out_carbohidratos');
+     out_carbohidratos.innerText = "Carbohidratos: " + macronutrientes[1].toFixed(0) + " gr";
+ 
+     var out_grasas = document.getElementById('out_grasas');
+     out_grasas.innerText = "Grasas: " + macronutrientes[2].toFixed(0) + " gr";
+}
+
+

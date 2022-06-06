@@ -21,42 +21,54 @@
                 <li>
                     <a href="dieta.html">Calcula tu dieta</a>
                 </li>
-                <li>
-                    <a href="about.html">Acerca de</a>
-                </li>
             </ul>
         </nav>
 
     </header>
 
     <main>
-        <section class="main-intro">
-            <h1>Descubre tu tipo de cuerpo</h1>
-            <p>Toma una captura de tu torso. De las caderas para arriba</p>
-        </section>
-        
-        <section class="video">
-            <div>
-                <video id="video_frame" playsinline autoplay ></video>
+        <div class="main-container-cuerpo">
+            <section class="main-intro">
+                <h1>Descubre tu tipo de cuerpo</h1>
+                <p>Apunta tu c&aacute;mara hacia tu torso. De las caderas para arriba</p>
+            </section>
+            
+            <section class="video">
+                <div>
+                    <video id="video_frame" playsinline autoplay ></video>
 
-                <div id="resultado"></div>
-            </div>
-            <div class="video-resized">
-                <canvas id="canvas_resized" width="200" height="230" ></canvas>
-                
-            </div>
-        </section>
-        <section>
-            <div class="main-button">
-                <a href="dieta.html">
-                    <button id="snap_frame">
-                        Continuar 
-                    </button>
-                </a>
-                
-                
-            </div>
-        </section>
+                    <div class="resultado-container">
+                        <div>
+                            <p>Tu tipo de cuerpo es:  </p>
+                        </div>
+        
+                        <div id="resultado-ia"> 
+                            
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <div class="video-resized">
+                    <canvas id="canvas_resized" width="200" height="230" ></canvas>
+                    
+                </div>
+            </section>
+            <section>
+                <div class="main-button button-cuerpo">
+                    <a href="dieta.html">
+                        <button>
+                            Continuar 
+                        </button>
+                    </a>
+                    
+                    
+                </div>
+            </section>
+
+        </div>
+        
 
         
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.1.0/dist/tf.min.js"></script>
