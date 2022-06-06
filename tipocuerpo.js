@@ -4,7 +4,7 @@ const X_MODEL = 200;
 const Y_MODEL = 230;
 
 let modelo;
-let facingMode = "user"
+let facingMode = "environment"
 
 //definimos las constantes para obtener y procesar el video
 
