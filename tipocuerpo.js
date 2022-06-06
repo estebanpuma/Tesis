@@ -51,7 +51,7 @@ function cambiarCamara(stream){
         });
     }
 
-    facingMode = facingMode == "user" ? "environment": "user";
+    facingMode = facingMode == "environment" ? "user": "environment";
     initWebCam();
 
 }

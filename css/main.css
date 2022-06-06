@@ -48,7 +48,7 @@ nav .nav-left-section a:hover{
 
 main {
     background-color: black;
-    height: 90vh;  
+    height: 115vh;  
 }
 
 main .main-container{
@@ -255,7 +255,7 @@ main .resultado-ia{
 
 .main-dieta{
     background-image: url("../img1.jpg");
-    height: 110vh;  
+    height: 130vh;  
     
 }
 
@@ -319,7 +319,7 @@ main .nivel-actividad-label #label-bajo{
 #section-resultados{
     color: aliceblue;
     background-color: black;
-    height: 120vh;
+    height: 160vh;
     display: none;
 }
 
