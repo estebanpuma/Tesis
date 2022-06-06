@@ -50,8 +50,12 @@ function cambiarCamara(stream){
             track.stop();
         });
     }
-
-    facingMode = facingMode == "user" ? "environment": "user";
+    if(facingMode == "user"){
+        facingMode =  "environment";
+    }else{
+        facingMode = 'environment'
+    }
+    
 
     var constraints = {
     audio: false,
