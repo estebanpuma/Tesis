@@ -7,8 +7,8 @@ let modelo;
 
 //definimos las constantes para obtener y procesar el video
 
-const VIDEO_WIDTH = 400;
-const VIDEO_HEIGHT = 600;
+const VIDEO_WIDTH = 320;
+const VIDEO_HEIGHT = 500;
 const videoFrame = document.getElementById('video_frame');
 const canvasResized = document.getElementById('canvas_resized');
 var ctx = canvasResized.getContext('2d');
@@ -19,7 +19,10 @@ const constraints = {
     video: {
         width: VIDEO_WIDTH,
         height: VIDEO_HEIGHT
-    }
+    },
+    facingMode: {
+        exact: 'environment'
+      }
 }
 
 //comprobamos acceso a webcam
