@@ -130,11 +130,11 @@ function onClickCalcularDieta(){
     var x = document.getElementById("section-resultados");
     x.style.display = "block";
     console.log(macronutrientes)
-    pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, caloriasMeta, macronutrientes );
+    pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, caloriasMeta, macronutrientes, bmr );
     
 };
 
-function pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, caloriasMeta, macronutrientes ){
+function pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, caloriasMeta, macronutrientes, bmr ){
 
      //Mostrar valores en HTML
      var out_porcentajeGrasa = document.getElementById("out_porcentajeGrasa");
@@ -143,7 +143,7 @@ function pasarResultados(porcentajeGrasa, masamagra, caloriasMantenimiento, calo
      var out_masamagra = document.getElementById("out_masamagra");
      out_masamagra.innerText = "Tu masa magra es de: " + masamagra.toFixed(1) + " Kg";
 
-     var out_bmr = document.getElementById('out-bmr');
+     var out_bmr = document.getElementById('out_bmr');
      out_bmr.innerText = "BMR: " + bmr.toFixed(1);
  
      var out_caloriasMantemimiento = document.getElementById("out_caloriasMantemimiento");
